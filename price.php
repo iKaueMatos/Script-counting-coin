@@ -19,13 +19,13 @@ $coinB = $argv[2];
 
 
 //Executa a Requisição na API
-$dadosCotacao = $obEconomy ->consultContaao('USD','BRL');
+$dateCounting = $obEconomy ->consultContaao('USD','BRL');
 
 
 //AJUSTA O RESPONSE
-$dadosCotacao = $dadosCotacao[$coinA.$coinB] ?? [];
+$dateCounting = $dadosCotacao[$coinA.$coinB] ?? [];
 
 //Imprimi o retorno da contação
 echo 'Moedas:' . $coinA .'->' . $coinB."\n";
-echo 'Compra '.($dadosCotacao['bid'] ?? 'Desconhecido') . "\n";
-echo 'Compra '.($dadosCotacao['ask'] ?? 'Desconhecido') . "\n";
+echo 'Compra '.($dateCounting['bid'] ?? 'Desconhecido') . "\n";
+echo 'Compra '.($dateCounting['ask'] ?? 'Desconhecido') . "\n";
