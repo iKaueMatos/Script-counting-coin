@@ -2,7 +2,6 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-
 //Dependecias
 use \App\Awesome\Economy;
 
@@ -17,10 +16,8 @@ if(!isset($argv[2])){
 $coinA = $argv[1];
 $coinB = $argv[2];
 
-
 //Executa a Requisição na API
 $dateCounting = $obEconomy ->consultContaao('USD','BRL');
-
 
 //AJUSTA O RESPONSE
 $dateCounting = $dadosCotacao[$coinA.$coinB] ?? [];
